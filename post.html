@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/direitoImobiliario.css"> 
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="bg-dark text-white p-3 fixed-top shadow">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+          <h1 class="h3 m-0">Advocacia Exemplo</h1>
+          <nav class="nav">
+              <a class="nav-link text-white" href="#quem-somos">Quem Somos</a>
+              <a class="nav-link text-white" href="#servicos">Serviços</a>
+              <a class="nav-link text-white" href="#localizacao">Localização</a>                
+          </nav>
+      </div>
+  </header>
+
+  <section class="container mt-5 pt-5" id="post-content">
+    <!-- Conteúdo do post será carregado aqui -->
+       <button class="btn btn-secondary mt-3" onclick="history.back()">
+                ← Voltar
+            </button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+      <div class="footer-content">
+          <p>📞 Telefone: (11) 99999-9999</p>
+          <p>📧 Email: contato@seudominio.com</p>
+          <p>🌐 Redes sociais:
+              <a href="https://facebook.com" target="_blank">Facebook</a> |
+              <a href="https://instagram.com" target="_blank">Instagram</a> |
+              <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          </p>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> Seu Escritório. Todos os direitos reservados.</p>
+      </div>
+  </footer>
+
+<script>
+const posts = [
+      {
+        id: 1,
+        title: "Contrato de Compra e Venda",
+        desc: "Saiba os principais cuidados na hora de assinar um contrato de compra e venda de imóveis.",
+        img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: 2,
+        title: "Regularização de Imóvel",
+        desc: "Entenda como funciona o processo de regularização de um imóvel e quais documentos são necessários.",
+        img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: 3,
+        title: "Locação de Imóvel",
+        desc: "Direitos e deveres de locadores e locatários no contrato de aluguel.",
+        img: "https://images.unsplash.com/photo-1581093588401-7a4f2ecb3784?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: 4,
+        title: "Documentação Imobiliária",
+        desc: "Documentos necessários para compra, venda e locação de imóveis.",
+        img: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: 5,
+        title: "Direitos do Inquilino",
+        desc: "Conheça os principais direitos do inquilino em contratos de aluguel.",
+        img: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: 6,
+        title: "Investimento Imobiliário",
+        desc: "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        img: "https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80",
+      },
+    ];
+
+
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
+
+const post = posts.find(p => p.id === id);
+
+if (post) {
+  document.getElementById("post-content").innerHTML = `
+    <h1>${post.title}</h1>
+    <img src="${post.img}" class="img-fluid mb-3" alt="${post.title}">
+    <p>${post.desc}</p>
+    <a href="direito-imobiliario.html" class="btn btn-secondary mt-3">&larr; Voltar</a>
+  `;
+} else {
+  document.getElementById("post-content").innerHTML = `<p>Post não encontrado.</p>`;
+}
+</script>
+
+</body>
+</html>
