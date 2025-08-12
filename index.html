@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,142 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- CSS Customizado -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style/style.css">
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header class="bg-dark text-white p-3 fixed-top shadow">
-        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <!-- Header fixo com logo alinhada -->
+    <header class="header-bg">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none" href="#"></a> <!-- Logo oculta, pois está no fundo -->
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quem-somos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#localizacao">Localização</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- 
+        <div class="container-fluid py-3 d-flex justify-content-between align-items-center flex-wrap">
             <h1 class="h3 m-0">Advocacia Exemplo</h1>
             <nav class="nav">
                 <a class="nav-link text-white" href="#quem-somos">Quem Somos</a>
                 <a class="nav-link text-white" href="#servicos">Serviços</a>
-                <a class="nav-link text-white" href="#localizacao">Localização</a>                
+                <a class="nav-link text-white" href="#localizacao">Localização</a>
             </nav>
         </div>
-    </header>
+    </header> -->
+
+
+
 
     <!-- BANNER / IMAGEM DO ESCRITÓRIO -->
-    <section id="inicio" class="hero-image">
-        <div class="container-fluid p-0">
-            <img src="img/wallpaper_cardoso&Muscelli.png" alt="Escritório de Advocacia" class="img-fluid w-100">
-        </div>
+    <section class="wallpaper-top">
+        <!-- <img src="img/wallpaper_cardoso&Muscelli.png" alt="Escritório de Advocacia" class="img-fluid w-100"> -->
     </section>
 
     <!-- QUEM SOMOS -->
-    <section id="quem-somos" class="py-5 text-center">
+    <!-- <section id="quem-somos" class="py-5 text-center">
         <div class="container">
             <h2>Quem Somos</h2>
-            <p class="lead">Somos um escritório de advocacia comprometido em oferecer soluções jurídicas de excelência, com ética e responsabilidade.</p>
+            <p class="lead">Somos um escritório de advocacia comprometido em oferecer soluções jurídicas de excelência,
+                com ética e responsabilidade.</p>
+        </div>
+    </section> -->
+
+    <!-- QUEM SOMOS -->
+    <section id="quem-somos" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Quem Somos</h2>
+            <p class="fs-5 text-muted">Somos um escritório comprometido com a excelência jurídica, atuando com ética,
+                responsabilidade e foco na solução dos problemas dos nossos clientes.</p>
+        </div>
+    </section>
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nossos Serviços</h2>
+            <div class="row g-4">
+
+                <!-- Direito Civil -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm text-center p-4 d-flex flex-column">
+                        <img src="img/Civil_2_0D3D47.png" alt="Direito Civil"
+                            class="card-img-icon img-fluid mb-3 mx-auto">
+                        <h5 class="card-title">Direito Civil</h5>
+                        <p class="card-text text-muted">
+                            Contratos comerciais, responsabilidade civil, negociações, litígios, defesa do consumidor e
+                            mais.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="/posts/direito-civil" class="btn btn-outline-teal mt-3">
+                                Ver artigos <i class="bi bi-arrow-right-circle ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direito Imobiliário -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm text-center p-4 d-flex flex-column">
+                        <img src="img/imobiliario_254761_0D3D47.png" alt="Direito Imobiliário"
+                            class="card-img-icon img-fluid mb-3 mx-auto">
+                        <h5 class="card-title">Direito Imobiliário</h5>
+                        <p class="card-text text-muted">
+                            Compra e venda, locações, regularização de imóveis, contratos e resolução de disputas.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="direito-imobiliario.html" target="_blank" class="btn btn-outline-teal mt-3">
+                                Ver artigos <i class="bi bi-arrow-right-circle ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Família e Sucessões -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm text-center p-4 d-flex flex-column">
+                        <img src="img/Assessoria_254761_0D3D47.png" alt="Família e Sucessões"
+                            class="card-img-icon img-fluid mb-3 mx-auto">
+                        <h5 class="card-title">Família e Sucessões</h5>
+                        <p class="card-text text-muted">
+                            Atuação em questões familiares e sucessórias com foco na proteção patrimonial, equilíbrio
+                            emocional e segurança jurídica.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="/posts/familia-e-sucessoes" class="btn btn-outline-teal mt-3">
+                                Ver artigos <i class="bi bi-arrow-right-circle ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
+
+
+    <!-- SERVIÇOS
     <section id="servicos" class="py-5 bg-light">
         <div class="container text-center">
             <h2>Serviços</h2>
@@ -48,36 +152,42 @@
                     <div class="card p-3 h-100 w-100">
                         <img src="img/civil_2.png" class="mx-auto mb-3" style="max-width:80px;" alt="Direito Civil">
                         <h3>Direito Civil</h3>
-                        <p>O Direito Cível Empresarial é a base para as transações comerciais bem-sucedidas. O escritório <b>Cardoso & Muscelli advogados</b> oferece orientação jurídica especializada em questões civis, incluindo contratos comerciais, responsabilidade civil, negociações, representação em litígios civis, solução de disputas contratuais, direito do consumidor, dentre outras atuações.</p>
+                        <p>O Direito Cível Empresarial é a base para as transações comerciais bem-sucedidas. O
+                            escritório <b>Cardoso & Muscelli advogados</b> oferece orientação jurídica especializada em
+                            questões civis, incluindo contratos comerciais, responsabilidade civil, negociações,
+                            representação em litígios civis, solução de disputas contratuais, direito do consumidor,
+                            dentre outras atuações.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mt-3 mt-md-0">
                     <div class="card p-3">
-                        <img src="img/imobiliario_254761.png" class="mx-auto mb-3" style="max-width:80px;" alt="Direito Imobiliário">
+                        <img src="img/imobiliario_254761.png" class="mx-auto mb-3" style="max-width:80px;"
+                            alt="Direito Imobiliário">
                         <h3>Direito Imobiliário</h3>
-                        <p>No mercado imobiliário, contar com uma assessoria jurídica especializada é essencial para garantir segurança e tranquilidade em todas as suas transações. O escritório <b>Cardoso & Muscelli advogados</b>, somos especializados em Direito Imobiliário e oferecemos suporte completo em compra e venda, locação, regularização de imóveis, administração de contratos e resolução de disputas.</p>
+                        <p>No mercado imobiliário, contar com uma assessoria jurídica especializada é essencial para
+                            garantir segurança e tranquilidade em todas as suas transações. O escritório <b>Cardoso &
+                                Muscelli advogados</b>, somos especializados em Direito Imobiliário e oferecemos suporte
+                            completo em compra e venda, locação, regularização de imóveis, administração de contratos e
+                            resolução de disputas.</p>
                         <a href="direito-imobiliario.html" target="_blank" class="btn btn-primary">Ver Posts</a>
                     </div>
                 </div>
                 <div class="col-md-4 mt-3 mt-md-0">
                     <div class="card p-3">
-                        <img src="img/Consultoria_254761.png" class="mx-auto mb-3" style="max-width:80px;" alt="Direito Penal">
+                        <img src="img/Consultoria_254761.png" class="mx-auto mb-3" style="max-width:80px;"
+                            alt="Direito Penal">
                         <h3>Contratos</h3>
-                        <p>A segurança e clareza dos contratos são fundamentais para estabelecer relações comerciais e pessoais estáveis e protegidas. O escritório <b>Cardoso & Muscelli advogados</b>, oferecemos assessoria completa na elaboração, revisão e análise de contratos, assegurando que todos os documentos estejam de acordo com as leis vigentes e que os interesses das partes sejam resguardados.</p>
+                        <p>A segurança e clareza dos contratos são fundamentais para estabelecer relações comerciais e
+                            pessoais estáveis e protegidas. O escritório <b>Cardoso & Muscelli advogados</b>, oferecemos
+                            assessoria completa na elaboração, revisão e análise de contratos, assegurando que todos os
+                            documentos estejam de acordo com as leis vigentes e que os interesses das partes sejam
+                            resguardados.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- POSTS -->
-    <!-- <section id="posts" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Posts Recentes</h2>
-            <div id="post-container" class="row g-4"></div>
-            <div id="pagination" class="mt-4 text-center"></div>
-        </div>
     </section> -->
+
 
     <!-- LOCALIZAÇÃO -->
     <section id="localizacao" class="py-5">
@@ -85,25 +195,33 @@
             <h2>Localização</h2>
             <p>Rua Visconde do Rio Branco, 863 - Ribeirão Preto - Centro</p>
             <div class="ratio ratio-16x9">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9108.085605668219!2d-47.81276445966304!3d-21.173858784397805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9befdc5f1499b%3A0xdd0d10c924a7d92f!2sRua%20Visconde%20do%20Rio%20Branco%2C%20863%20-%20Centro%2C%20Ribeir%C3%A3o%20Preto%20-%20SP%2C%2014015-000!5e0!3m2!1spt-BR!2sbr!4v1754831337141!5m2!1spt-BR!2sbr" 
-                    width="200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9108.085605668219!2d-47.81276445966304!3d-21.173858784397805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9befdc5f1499b%3A0xdd0d10c924a7d92f!2sRua%20Visconde%20do%20Rio%20Branco%2C%20863%20-%20Centro%2C%20Ribeir%C3%A3o%20Preto%20-%20SP%2C%2014015-000!5e0!3m2!1spt-BR!2sbr!4v1754831337141!5m2!1spt-BR!2sbr"
+                    width="200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
+    <footer class="bg-dark text-white mt-5">
+        <div class="container-fluid py-4 text-center">
             <p>📞 Telefone: (11) 99999-9999</p>
             <p>📧 Email: contato@seudominio.com</p>
-            <p>🌐 Redes sociais:
-                <a href="https://facebook.com" target="_blank">Facebook</a> |
-                <a href="https://instagram.com" target="_blank">Instagram</a> |
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            </p>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Seu Escritório. Todos os direitos reservados.</p>
+            <p>🌐 Redes sociais:</p>
+            <div class="d-flex justify-content-center gap-4 fs-4 mt-2">
+                <a href="https://facebook.com" target="_blank" class="text-white">
+                    <i class="bi bi-facebook social-icon"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-white">
+                    <i class="bi bi-instagram social-icon"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-white">
+                    <i class="bi bi-linkedin social-icon"></i>
+                </a>
+            </div>
+            <hr class="border-light mt-4">
+            <p class="mb-0">&copy; <span id="year"></span> Seu Escritório. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -113,4 +231,5 @@
     <!-- JS Customizado -->
     <script src="javascript/script.js"></script>
 </body>
+
 </html>
