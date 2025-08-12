@@ -19,20 +19,31 @@ header {
   background-color: #003333;
 }
 
+.logo {  
+  top: 0;
+  width: 21%;
+  z-index: 1000;
+  min-height: 80px;
+  background-image: url(../img/teste.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #003333;
+  background-size: 100% auto;
+}
+
+/* .logo {
+    height: 60px;
+    width: auto; 
+} */
+
 .header-bg {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   min-height: 80px;
-  background-image: url('../img/logo-cardoso-muscelli.png');
-  /* substitua pelo caminho correto */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
   background-color: #003333;
-  background-size: 14% auto;
-  /* fallback */
 }
 
 .navbar {
@@ -79,11 +90,17 @@ header {
 }
 
 @media (max-width: 768px) {
-  .header-bg {
-    background-size: 50% auto;
-    background-position: center top;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+  .logo {    
+    top: 0;
+    width: 80%;
+    z-index: 1000;
+    min-height: 80px;
+    background-image: url(../img/teste.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #003333;
+    background-size: 100% auto;
   }
 }
 
@@ -101,11 +118,13 @@ header {
     margin-bottom: 0.5rem;
   }
 }
+
 /*FIM*/
 
 /* Customizações adicionais */
 section {
-  scroll-margin-top: 80px; /* ajuste conforme a altura do seu header */
+  scroll-margin-top: 80px;
+  /* ajuste conforme a altura do seu header */
 }
 
 .card {
