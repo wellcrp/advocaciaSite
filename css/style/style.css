@@ -210,6 +210,36 @@ header {
     color: rgb(31, 122, 122)
 }
 
+/*ANIMATION FOOTER*/
+/* Transição suave no hover */
+.social-icon {
+    transition: color 0.15s ease;
+    cursor: pointer;
+}
+
+/* Animação de clique (pulse) */
+@keyframes pulseClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.social-icon:active {
+    animation: pulseClick 0.3s ease;
+    color: #0D3D47; /* cor no clique */
+}
+
+a:hover .social-icon {
+    color: #17a2b8;
+}
+
+
 /*FIM*/
 /* body {
     min-height: 100vh;
