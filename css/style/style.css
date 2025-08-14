@@ -20,6 +20,11 @@ header {
   background-color: #003333;
 }
 
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+
 .logo {  
   top: 0;
   width: 21%;
