@@ -6,20 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direito Imobiliário - Escritório de Advocacia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style/style.css">
+
+    <!-- No <head> -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Antes do </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>   
 </head>
 
-<body>
-    <!-- HEADER -->
-    <header class="bg-dark text-white p-3 fixed-top shadow">
-        <div class="container d-flex flex-wrap justify-content-between align-items-center">
-            <h1 class="h3 m-0">Advocacia Exemplo</h1>
-            <nav class="nav">
-                <a class="nav-link text-white" href="#quem-somos">Quem Somos</a>
-                <a class="nav-link text-white" href="#servicos">Serviços</a>
-                <a class="nav-link text-white" href="#localizacao">Localização</a>
-            </nav>
-        </div>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header fixo com logo alinhada -->
+    <header class="header-bg">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none" href="#"></a> <!-- Logo oculta, pois está no fundo -->
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="logo"></div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html#quem-somos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#localizacao">Localização</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- LISTA DE POSTS -->
@@ -28,13 +51,12 @@
         <div id="posts-container" class="row g-4"></div>
 
         <!-- Paginação -->
-        <nav>
+        <nav  data-aos="fade-up">
             <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
         </nav>
     </section>
 
-    <!-- FOOTER -->
-    <!-- FOOTER -->
+    <!-- FOOTER -->   
     <footer class="bg-dark text-white mt-5">
         <div class="container-fluid py-4 text-center">
             <p>📞 Telefone: (11) 99999-9999</p>
@@ -53,6 +75,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="bancoDados/bd_imobiliario.js"></script>
     <script src="javascript/postsImobiliarios.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        });
+    </script>
 </body>
 
 </html>
