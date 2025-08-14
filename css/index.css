@@ -4,6 +4,38 @@ section {
   /* ajuste conforme a altura do seu header */
 }
 
+:root {
+  --primary-color: #0d3d47;
+  --info-color: #17a2b8;
+  --dark-teal: #0d3d47;
+}
+
+#quem-somos {
+  background-color: rgba(13, 61, 71, 0.05);
+}
+
+#quem-somos .text-primary {
+  color: var(--primary-color) !important;
+}
+
+#quem-somos .btn-info {
+  background-color: var(--info-color);
+  border-color: var(--info-color);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#quem-somos .btn-info:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Seção “Quem Somos” */
+/* .bg-teal-suave {
+  background-color: var(--teal-suave) !important;
+} */
+
+
+
 .card {
   border-radius: 8px;
   transition: transform 0.2s ease;
