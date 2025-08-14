@@ -13,9 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Antes do </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
-
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Header fixo com logo alinhada -->
@@ -51,24 +50,29 @@
         <div id="posts-container" class="row g-4"></div>
 
         <!-- Paginação -->
-        <nav  data-aos="fade-up">
+        <nav data-aos="fade-up">
             <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
         </nav>
     </section>
 
-    <!-- FOOTER -->   
+     <!-- FOOTER -->
     <footer class="bg-dark text-white mt-5">
         <div class="container-fluid py-4 text-center">
             <p>📞 Telefone: (11) 99999-9999</p>
-            <p>📧 Email: contato@seudominio.com</p>
-            <p>🌐 Redes sociais:
-                <a href="https://facebook.com" target="_blank" class="text-white text-decoration-underline">Facebook</a>
-                |
-                <a href="https://instagram.com" target="_blank"
-                    class="text-white text-decoration-underline">Instagram</a> |
-                <a href="https://linkedin.com" target="_blank" class="text-white text-decoration-underline">LinkedIn</a>
-            </p>
-            <hr class="border-light">
+            <p><i class="bi bi-envelope-at-fill social-icon"></i> Email: contato@seudominio.com</p>
+            <p>🌐 Redes sociais:</p>
+            <div class="d-flex justify-content-center gap-4 fs-4 mt-2">
+                <a href="https://facebook.com" target="_blank" class="text-white">
+                    <i class="bi bi-facebook social-icon"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-white">
+                    <i class="bi bi-instagram social-icon"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-white">
+                    <i class="bi bi-linkedin social-icon"></i>
+                </a>
+            </div>
+            <hr class="border-light mt-4">
             <p class="mb-0">&copy; <span id="year"></span> Seu Escritório. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -76,7 +80,7 @@
     <script src="bancoDados/bd_imobiliario.js"></script>
     <script src="javascript/postsImobiliarios.js"></script>
 
-      <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             AOS.init({
                 duration: 800,
