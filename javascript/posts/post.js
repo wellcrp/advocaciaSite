@@ -6,13 +6,19 @@ document.getElementById("quem-somos").addEventListener("click", function(e) {
     // Pega a URL base do site (sem o path atual)
     const baseURL = window.location.href;
     const baseOrigin = window.location.origin;
-    
+
     const urlFinal = baseOrigin + "/advocaciaSite/#quem-somos";
     console.log(urlFinal);
 
     // Redireciona para a home com o hash
-     window.location.href = baseURL + "/#quem-somos";
+     window.location.href = urlFinal;
 });
+
+
+
+
+
+
 
 function getPostIdFromURL() {
     const params = new URLSearchParams(window.location.search);
