@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #145C5C;
+    --info-color: #145C5C;
+    --dark-teal: #0d3d47;
+}
+
+/* Header escuro */
+.bg-dark-teal {
+    background-color: var(--primary-color) !important;
+}
+
+#contato .text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Botão customizado */
+.btn-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    transition: background-color 0.3s, transform 0.2s;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    color: white;
+    border: var(--primary-color);
+}
+
+/* Campos de formulário em foco */
+.form-control:focus {
+    border-color: var(--info-color);
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+}
+
+/* Ícones de contato */
+.contact-info i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    width: 1.3rem;
+}
+
+/* Iframe responsivo */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+/* #quemSomosPersonalizado {
+  background-color: transparent;
+} */
