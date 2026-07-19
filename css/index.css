@@ -8,6 +8,7 @@ section {
   --primary-color: #145C5C;
   --info-color: #145C5C;
   --dark-teal: #0d3d47;
+  --header-height: 86px; /* height of fixed header to account for overlay */
 }
 
 #quem-somos {
@@ -56,8 +57,39 @@ section {
 .wallpaper-top {
   background-image: url('../img/wallpaper_cardoso&Muscelli.png');
   background-size: cover;
-  background-position: center center;
+  /* Keep the visual center visible under a fixed header */
+  background-position: center calc(50% + (var(--header-height) / 2));
   background-repeat: no-repeat;
   width: 100%;
-  height: 70vh;
+  /* Use dynamic --vh to avoid mobile browser 100vh issues, subtract header height */
+  height: calc((var(--vh, 1vh) * 100) - var(--header-height));
+  margin-bottom: 0;
+  position: relative;
+  top: 0;
+  background-color: #0d3d47; /* fallback while image loads */
+}
+
+/* For smaller screens, do not force banner to fill entire viewport height;
+   show image without cropping the visual center and avoid negative offset */
+@media (max-width: 900px) {
+  .wallpaper-top {
+    height: auto;
+    min-height: 40vh; /* ensure a visible banner area */
+    top: 0; /* place below the fixed header */
+    background-position: center center; /* keep center visible */
+    padding: 0.5rem 0; /* small vertical spacing */
+  }
+}
+
+/* For larger screens, ensure background is positioned to keep center visible
+   and avoid layout gaps if header height changes */
+@media (min-width: 901px) {
+  .wallpaper-top {
+    /* On large screens make the banner fill the viewport fully (full-bleed)
+       so the image is always 'full' without fixed pixel min-heights. */
+    height: 100vh;
+    background-position: center center;
+    min-height: 100vh;
+    margin-bottom: 0;
+  }
 }
