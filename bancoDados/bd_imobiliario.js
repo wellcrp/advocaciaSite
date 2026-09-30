@@ -3,42 +3,84 @@ const posts = [
         id: 1,
         title: "Contrato de Compra e Venda de Imóvel: Cláusulas Essenciais",
         desc: "Saiba os principais cuidados na hora de assinar um contrato de compra e venda de imóveis.",
+        content: [
+            "A compra e venda de imóvel exige atenção desde a fase de negociação, porque qualquer omissão contratual pode gerar disputas futuras entre as partes. Antes de assinar, é importante validar a matrícula atualizada, a situação fiscal do bem e a capacidade jurídica dos contratantes.",
+            "No contrato, cláusulas sobre preço, forma de pagamento, prazo de entrega, multas e condições de rescisão devem ser redigidas com precisão. Termos genéricos costumam abrir margem para interpretações conflitantes e podem dificultar a defesa de direitos em eventual litígio.",
+            "Também é recomendável prever de forma objetiva quem assume custos de cartório, tributos incidentes e eventuais despesas condominiais em aberto. A ausência dessa definição pode gerar cobranças indevidas e atrasar a conclusão do negócio.",
+            "Com uma análise jurídica preventiva, o comprador e o vendedor reduzem riscos, preservam segurança patrimonial e aumentam a previsibilidade da operação. Esse cuidado inicial costuma ser decisivo para evitar prejuízos financeiros e problemas judiciais no futuro."
+        ],
         img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: 2,
         title: "Regularização de Imóvel: Etapas Jurídicas e Documentos",
         desc: "Entenda como funciona o processo de regularização de um imóvel e quais documentos são necessários.",
+        content: [
+            "A regularização imobiliária é o conjunto de medidas necessárias para adequar a situação documental e registral do imóvel à realidade. O primeiro passo é identificar a origem da irregularidade, que pode estar relacionada à construção, à titularidade, à matrícula ou à ausência de averbações.",
+            "A análise costuma envolver matrícula atualizada, contratos, escrituras, comprovantes fiscais, plantas e documentos emitidos pelo município. Cada caso exige uma conferência própria, pois imóveis com características semelhantes podem depender de procedimentos administrativos diferentes.",
+            "Quando há divergência entre a situação física e os registros oficiais, pode ser necessário solicitar aprovação de projeto, habite-se, retificação de área, usucapião ou outra medida adequada. A escolha do caminho correto evita gastos desnecessários e reduz atrasos no processo.",
+            "Com a documentação organizada e acompanhamento jurídico, o proprietário aumenta a segurança para vender, financiar ou transmitir o imóvel. A regularização também valoriza o patrimônio e previne conflitos com compradores, vizinhos e órgãos públicos."
+        ],
         img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: 3,
         title: "Locação de Imóvel: Direitos e Deveres no Contrato",
         desc: "Direitos e deveres de locadores e locatários no contrato de aluguel.",
+        content: [
+            "A locação de imóvel deve ser formalizada por contrato claro, com definição do prazo, valor do aluguel, índice de reajuste, garantias e responsabilidades de cada parte. Essas informações ajudam a evitar dúvidas durante a vigência e facilitam a solução de eventuais conflitos.",
+            "O locador deve entregar o imóvel em condições adequadas de uso e responder por problemas estruturais anteriores à locação. O locatário, por sua vez, deve pagar pontualmente, conservar o bem e comunicar danos ou reparos necessários assim que forem identificados.",
+            "Também é importante diferenciar despesas ordinárias e extraordinárias de condomínio, além de estabelecer regras para obras, benfeitorias e devolução das chaves. A vistoria inicial e final é uma ferramenta essencial para registrar o estado do imóvel.",
+            "Uma relação locatícia bem documentada protege ambas as partes e reduz o risco de cobranças indevidas. Em caso de inadimplência ou descumprimento contratual, a análise do contrato orienta a medida mais adequada para preservar os direitos envolvidos."
+        ],
         img: "https://images.unsplash.com/photo-1581093588401-7a4f2ecb3784?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: 4,
         title: "Documentação Imobiliária: O que Verificar Antes de Assinar",
         desc: "Documentos necessários para compra, venda e locação de imóveis.",
+        content: [
+            "A conferência documental antes da assinatura é uma das etapas mais importantes de uma negociação imobiliária. Ela permite identificar restrições, dívidas, ações judiciais e divergências que podem comprometer a segurança do negócio.",
+            "Entre os documentos mais relevantes estão a matrícula atualizada, certidões do imóvel, comprovantes de tributos e informações sobre condomínio. Também é necessário verificar os documentos pessoais e a legitimidade de quem está negociando o bem.",
+            "Em determinadas situações, a análise deve alcançar empresas, inventários, procurações e regimes de bens. Ignorar essas particularidades pode gerar questionamentos sobre a validade da venda ou dificultar o registro da transferência.",
+            "A avaliação preventiva não substitui a decisão das partes, mas oferece elementos para negociar com mais clareza. Com os documentos revisados, eventuais pendências podem ser resolvidas antes da assinatura ou refletidas adequadamente no contrato."
+        ],
         img: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: 5,
         title: "Direitos do Inquilino: Garantias e Proteção Legal",
         desc: "Conheça os principais direitos do inquilino em contratos de aluguel.",
+        content: [
+            "O inquilino tem direito a receber o imóvel em condições adequadas para a finalidade prevista no contrato. Também deve ter acesso a informações claras sobre aluguel, encargos, garantia e procedimentos para comunicação de reparos.",
+            "A cobrança de valores deve respeitar o contrato e a legislação aplicável. O locador não pode transferir ao inquilino despesas que não sejam de sua responsabilidade nem exigir mais de uma modalidade de garantia na mesma locação.",
+            "Durante a locação, o imóvel deve ser utilizado conforme combinado, mas o inquilino não pode ser privado de sua posse por medidas arbitrárias. Eventuais visitas, obras e inspeções precisam observar aviso prévio e razoabilidade.",
+            "Conhecer esses direitos ajuda o inquilino a registrar problemas, negociar soluções e contestar cobranças indevidas. A guarda de recibos, mensagens e laudos de vistoria também é importante para preservar provas."
+        ],
         img: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: 6,
         title: "Investimento Imobiliário com Segurança Jurídica",
         desc: "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        content: [
+            "O investimento imobiliário pode oferecer proteção patrimonial e renda, mas exige análise cuidadosa antes da aplicação dos recursos. A escolha do imóvel deve considerar localização, documentação, liquidez, custos e finalidade do investimento.",
+            "Além do preço, é necessário estimar tributos, despesas cartorárias, condomínio, manutenção e possíveis períodos sem locação. Esses fatores influenciam diretamente o retorno e podem alterar a viabilidade econômica do negócio.",
+            "A análise jurídica deve verificar a titularidade, restrições registrárias, passivos e condições do contrato. Em empreendimentos novos, também merece atenção a situação da incorporadora, as licenças e as regras de entrega.",
+            "Com planejamento e diligência documental, o investidor reduz riscos e toma decisões baseadas em informações concretas. A assessoria preventiva contribui para estruturar a operação e proteger o patrimônio ao longo do tempo."
+        ],
         img: "https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80",
     },
     {
         id: 7,
         title: "Due Diligence Imobiliária: Como Reduzir Riscos na Compra",
         desc: "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        content: [
+            "A due diligence imobiliária é uma investigação documental realizada antes da compra para identificar riscos jurídicos, financeiros e registrais. Ela amplia a segurança da negociação e permite que o comprador conheça melhor o ativo que pretende adquirir.",
+            "O trabalho pode incluir análise da matrícula, certidões do imóvel, histórico de propriedade, débitos fiscais, ações judiciais e documentos dos vendedores. Quando o vendedor é uma empresa, também são avaliadas informações societárias e patrimoniais relevantes.",
+            "Os resultados da investigação ajudam a definir garantias, condições suspensivas, retenções de valores e outras cláusulas contratuais. Pendências encontradas podem ser corrigidas antes do fechamento ou consideradas na formação do preço.",
+            "Mais do que uma formalidade, a due diligence é uma ferramenta de gestão de risco. Ela proporciona uma decisão de compra mais consciente e reduz a probabilidade de prejuízos após a transferência do imóvel."
+        ],
         img: "https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80",
     },
     // {

@@ -43,14 +43,23 @@
     </nav>
   </header>
 
+  <div class="reading-progress" aria-hidden="true">
+    <span id="reading-progress-bar"></span>
+  </div>
+
   <!-- POST CONTENT -->
-  <main class="container mt-5 pt-5">
+  <main class="container post-main mt-5 pt-5">
     <div class="post-heading text-center">
       <h1 class="post-title">Artigo Imobiliário</h1>
       <p class="post-subtitle">Análise objetiva e prática para apoiar decisões patrimoniais com segurança jurídica.</p>
+      <div class="post-meta-row" aria-label="Informações do artigo">
+        <span class="post-meta-chip"><i class="bi bi-journal-text"></i> Conteúdo Jurídico</span>
+        <span id="post-reading-time" class="post-meta-chip"><i class="bi bi-clock-history"></i> 1 min de leitura</span>
+        <span id="post-date" class="post-meta-chip"><i class="bi bi-calendar3"></i> --</span>
+      </div>
     </div>
     <div id="post-content" class="post-card"></div>
-    <a href="direito-imobiliario.html" class="btn-voltar-discreto" aria-label="Voltar para a lista de artigos">
+    <a href="direito-imobiliario.html" class="btn-voltar-discreto post-back-link" aria-label="Voltar para a lista de artigos">
       <i class="bi bi-arrow-left"></i>
       <span>Voltar para os artigos</span>
     </a>
