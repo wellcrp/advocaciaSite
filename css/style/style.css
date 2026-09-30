@@ -4,9 +4,18 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --btn-start: #145c5c;
+  --btn-mid: #1f7a7a;
+  --btn-end: #2a9d8f;
+  --btn-text: #ffffff;
+  --btn-shadow: rgba(20, 92, 92, 0.26);
+  --header-height: 78px;
+}
+
 body {
   margin: 0;
-  padding-top: 86px;
+  padding-top: var(--header-height);
   
   background-color: #f8f9fa;
   font-family: 'Segoe UI', sans-serif;
@@ -17,7 +26,10 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #003333;
+  background: rgba(5, 40, 40, 0.86);
+  border-bottom: 1px solid rgba(126, 202, 192, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .cursor-pointer {
@@ -27,15 +39,15 @@ header {
 
 .logo {  
   top: 0;
-  width: 21%;
+  width: clamp(300px, 28vw, 430px);
   z-index: 1000;
-  min-height: 80px;
+  min-height: 74px;
   background-image: url(../../img/teste.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
-  background-color: #003333;
-  background-size: 100% auto;
+  background-size: auto 100%;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.22)) contrast(1.08) saturate(1.06);
 }
 
 /* .logo {
@@ -48,12 +60,41 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  min-height: 80px;
-  background-color: #003333;
+  min-height: 78px;
+  background: linear-gradient(120deg, rgba(5, 43, 43, 0.94) 0%, rgba(11, 66, 66, 0.9) 100%);
+}
+
+/* Home: header sobreposto ao banner principal */
+body.home-page {
+  padding-top: 0;
+}
+
+body.home-page .header-bg {
+  background: linear-gradient(180deg, rgba(3, 28, 28, 0.38) 0%, rgba(3, 28, 28, 0.16) 65%, rgba(3, 28, 28, 0.03) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+body.home-page .header-bg.header-scrolled {
+  background: linear-gradient(120deg, rgba(5, 43, 43, 0.98) 0%, rgba(11, 66, 66, 0.97) 100%);
+  border-bottom: 1px solid rgba(126, 202, 192, 0.34);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
-  padding: 0.5rem 1rem;
+  padding: 0.28rem 1rem;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
 }
 
 .logo-container {
@@ -87,26 +128,82 @@ header {
 
 .navbar-nav .nav-link {
   color: #ffffff !important;
-  font-weight: 500;
-  margin-left: 1rem;
+  font-weight: 600;
+  margin-left: 0.55rem;
+  padding: 0.48rem 0.82rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  letter-spacing: 0.2px;
+  transition: color 0.24s ease, background-color 0.24s ease, border-color 0.24s ease, transform 0.24s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffcc99 !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(165, 223, 213, 0.34);
+  transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.navbar-nav .nav-link.is-active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(173, 230, 221, 0.52);
+  box-shadow: 0 6px 16px rgba(6, 36, 36, 0.25);
 }
 
 @media (max-width: 768px) {
   .logo {    
     top: 0;
-    width: 80%;
+    width: clamp(250px, 86vw, 400px);
     z-index: 1000;
-    min-height: 80px;
-    background-image: url(../img/teste.png);
+    min-height: 66px;
+    background-image: url(../../img/teste.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #003333;
-    background-size: 100% auto;
+    background-size: auto 100%;
+  }
+
+  .header-bg {
+    min-height: 70px;
+  }
+
+  .navbar {
+    padding: 0.2rem 0.72rem;
+  }
+
+  .navbar-collapse {
+    margin-top: 0.35rem;
+    padding: 0.62rem 0.72rem;
+    border-radius: 12px;
+    background: rgba(4, 42, 42, 0.96);
+    border: 1px solid rgba(143, 214, 205, 0.24);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-bottom: 0.35rem;
+    padding: 0.52rem 0.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    background-image: url(../../img/headerLogo.png);
+    background-size: 100% 100%;
+    background-position: 36% center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .logo {
+    background-position: 32% center;
   }
 }
 
@@ -123,20 +220,84 @@ header {
     margin-left: 0;
     margin-bottom: 0.5rem;
   }
+
+  .btn-outline-teal,
+  .btn-info {
+    width: 100%;
+  }
+
+  .btn-voltar-discreto {
+    width: 100%;
+    float: none;
+    margin-bottom: 2rem;
+  }
+
+  .pagination {
+    gap: 0.35rem;
+  }
+
+  .page-link {
+    min-width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  footer .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
-.btn-outline-teal {
-  color: #145C5C;
-  border: 1px solid #145C5C;
-  transition: all 0.3s ease;
-  padding: 6px 16px;  
-  min-width: auto;  
+/* Botao padrao global do site */
+.btn-outline-teal,
+.btn-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  border: 0;
+  padding: 0.7rem 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: var(--btn-text) !important;
+  background: linear-gradient(120deg, var(--btn-start) 0%, var(--btn-mid) 55%, var(--btn-end) 100%);
+  box-shadow: 0 10px 22px var(--btn-shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
 }
 
-.btn-outline-teal:hover {
-  background-color: #1f7a7a;
-  color: white;
-  border-color: #1f7a7a;
+.btn-outline-teal:hover,
+.btn-info:hover {
+  color: var(--btn-text) !important;
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 14px 28px rgba(20, 92, 92, 0.32);
+}
+
+.btn-outline-teal:active,
+.btn-info:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(20, 92, 92, 0.24);
+}
+
+.btn-outline-teal:focus-visible,
+.btn-info:focus-visible,
+.btn-voltar-discreto:focus-visible,
+.page-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 6px rgba(31, 122, 122, 0.45);
+}
+
+.btn-outline-teal i,
+.btn-info i {
+  transition: transform 0.22s ease;
+}
+
+.btn-outline-teal:hover i,
+.btn-info:hover i {
+  transform: translateX(3px);
 }
 
 
@@ -160,35 +321,44 @@ header {
   object-fit: cover;
 }
 
-.btn-outline-teal {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  color: #145C5C;
-  border: 1px solid #145C5C;
-  transition: all 0.3s ease;
+/* Botao secundario do post */
+.btn-voltar-discreto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  float: right;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 92, 92, 0.28);
+  padding: 0.66rem 1.08rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #0f4f4f;
+  background: linear-gradient(180deg, #ffffff 0%, #f3fbfb 100%);
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(20, 92, 92, 0.12);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.btn-outline-teal::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #1f7a7a;
-  transition: left 0.3s ease;
-  z-index: 0;
+.btn-voltar-discreto:hover {
+  color: #0f4f4f;
+  background: linear-gradient(180deg, #ffffff 0%, #eaf8f7 100%);
+  border-color: rgba(20, 92, 92, 0.45);
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(20, 92, 92, 0.18);
 }
 
-.btn-outline-teal:hover::after {
-  left: 0;
+.btn-voltar-discreto i {
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
 }
 
-.btn-outline-teal span,
-.btn-outline-teal i {
-  position: relative;
-  z-index: 2;
+.btn-voltar-discreto:hover i {
+  transform: translateX(-2px);
 }
 
 
@@ -206,13 +376,38 @@ header {
   }
 }
 
-.active>.page-link, .page-link.active {
-    background-color: #1f7a7a;
-    border-color: #1f7a7a
+.pagination {
+  gap: 0.45rem;
 }
 
 .page-link {
-    color: rgb(31, 122, 122)
+  min-width: 2.45rem;
+  height: 2.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  color: #145c5c;
+  border: 1px solid rgba(20, 92, 92, 0.22);
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(20, 92, 92, 0.08);
+  transition: transform 0.22s ease, color 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.page-link:hover {
+  color: #ffffff;
+  border-color: #1f7a7a;
+  background: linear-gradient(120deg, #145c5c 0%, #1f7a7a 55%, #2a9d8f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(20, 92, 92, 0.24);
+}
+
+.active > .page-link,
+.page-link.active {
+  color: #ffffff;
+  border-color: #1f7a7a;
+  background: linear-gradient(120deg, #145c5c 0%, #1f7a7a 55%, #2a9d8f 100%);
+  box-shadow: 0 10px 18px rgba(20, 92, 92, 0.28);
 }
 
 /*ANIMATION FOOTER*/
@@ -242,6 +437,155 @@ header {
 
 a:hover .social-icon {
     color: #17a2b8;
+}
+
+/* Boxes modernos para a pagina Direito Imobiliario */
+.imobiliario-page {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(20, 92, 92, 0.08), transparent 34%),
+    radial-gradient(circle at 86% 76%, rgba(42, 157, 143, 0.08), transparent 36%),
+    #f7faf9;
+}
+
+.imobiliario-heading {
+  margin-bottom: 2rem;
+}
+
+.imobiliario-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.95rem;
+  font-size: clamp(1.85rem, 2vw + 1rem, 2.5rem);
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #123f3f;
+  text-wrap: balance;
+}
+
+.imobiliario-title::before {
+  content: "Publicações";
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b7a78;
+}
+
+.imobiliario-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.36rem;
+  width: 64%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #145c5c 0%, #1f7a7a 55%, #2a9d8f 100%);
+}
+
+.imobiliario-subtitle {
+  max-width: 62ch;
+  margin: 0.5rem auto 0;
+  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.12rem);
+  line-height: 1.68;
+  color: #456b6b;
+}
+
+.imobiliario-page #posts-container .card {
+  position: relative;
+  border: 1px solid rgba(20, 92, 92, 0.14);
+  border-radius: 18px;
+  background: linear-gradient(165deg, #ffffff 0%, #f4fbfa 100%);
+  box-shadow: 0 14px 30px rgba(9, 43, 43, 0.11);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.imobiliario-page #posts-container .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.56) 0%, transparent 52%);
+  pointer-events: none;
+}
+
+.imobiliario-page #posts-container .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #145c5c 0%, #1f7a7a 55%, #2a9d8f 100%);
+  opacity: 0.9;
+}
+
+.imobiliario-page #posts-container .card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(20, 92, 92, 0.28);
+  box-shadow: 0 22px 42px rgba(9, 43, 43, 0.18);
+}
+
+.imobiliario-page #posts-container .card-title {
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: #113e3e;
+}
+
+.imobiliario-page #posts-container .card-text {
+  color: #446666;
+  line-height: 1.55;
+}
+
+.imobiliario-page #posts-container .card-img-top {
+  border-bottom: 1px solid rgba(20, 92, 92, 0.1);
+}
+
+/* Ajustes responsivos adicionais globais */
+@media (max-width: 991px) {
+  :root {
+    --header-height: 74px;
+  }
+
+  .imobiliario-page #posts-container .card:hover,
+  .post-card:hover,
+  #servicos .service-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 576px) {
+  .imobiliario-page #posts-container .card,
+  .post-card,
+  #servicos .service-card {
+    border-radius: 14px;
+  }
+
+  .imobiliario-heading {
+    margin-bottom: 1.4rem;
+  }
+
+  .imobiliario-title::before {
+    font-size: 0.68rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.12em;
+  }
+
+  .imobiliario-title::after {
+    height: 3px;
+    bottom: -0.3rem;
+  }
+
+  .imobiliario-subtitle {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+}
+
+iframe {
+  max-width: 100%;
 }
 
 

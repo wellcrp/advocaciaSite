@@ -73,3 +73,90 @@ const onResizeAll = debounce(() => {
 }, 120);
 
 window.addEventListener('resize', onResizeAll);
+
+function setupHomeOverlayHeader() {
+	if (!document.body.classList.contains('home-page')) return;
+
+	const header = document.querySelector('header.header-bg');
+	if (!header) return;
+
+	const syncHeaderState = () => {
+		const shouldSolid = window.scrollY > 24;
+		header.classList.toggle('header-scrolled', shouldSolid);
+	};
+
+	window.addEventListener('scroll', debounce(syncHeaderState, 20), { passive: true });
+	window.addEventListener('resize', debounce(syncHeaderState, 50));
+	syncHeaderState();
+}
+
+window.addEventListener('DOMContentLoaded', setupHomeOverlayHeader);
+
+function setupActiveNavState() {
+	const navLinks = Array.from(document.querySelectorAll('.navbar-nav .nav-link'));
+	if (navLinks.length === 0) return;
+
+	const isHome = window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/') || window.location.pathname === '';
+	if (!isHome) return;
+
+	const sectionLinks = navLinks
+		.map((link) => {
+			const href = link.getAttribute('href') || '';
+			if (!href.startsWith('#')) return null;
+			const target = document.querySelector(href);
+			if (!target) return null;
+			return { link, target };
+		})
+		.filter(Boolean);
+
+	if (sectionLinks.length === 0) return;
+
+	const setActive = (activeLink) => {
+		navLinks.forEach((link) => {
+			const isActive = link === activeLink;
+			link.classList.toggle('is-active', isActive);
+			if (isActive) {
+				link.setAttribute('aria-current', 'page');
+			} else {
+				link.removeAttribute('aria-current');
+			}
+		});
+	};
+
+	const getVisibleSection = () => {
+		const marker = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0) + 24;
+		let current = sectionLinks[0];
+
+		for (const item of sectionLinks) {
+			const top = item.target.getBoundingClientRect().top;
+			if (top - marker <= 0) {
+				current = item;
+			}
+		}
+
+		return current;
+	};
+
+	const updateActiveByScroll = () => {
+		const current = getVisibleSection();
+		if (current) setActive(current.link);
+	};
+
+	const updateActiveByHash = () => {
+		const currentHash = window.location.hash;
+		const matched = sectionLinks.find((item) => item.link.getAttribute('href') === currentHash);
+		if (matched) {
+			setActive(matched.link);
+		} else {
+			updateActiveByScroll();
+		}
+	};
+
+	window.addEventListener('scroll', debounce(updateActiveByScroll, 50), { passive: true });
+	window.addEventListener('hashchange', updateActiveByHash);
+	window.addEventListener('resize', debounce(updateActiveByScroll, 80));
+
+	updateActiveByHash();
+}
+
+window.addEventListener('DOMContentLoaded', setupActiveNavState);
