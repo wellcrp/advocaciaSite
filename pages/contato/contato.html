@@ -57,6 +57,7 @@
                 <!-- Formulário -->
                 <div class="col-lg-6">
                     <h2 class="h3 text-primary fw-bold mb-4">Entre em Contato</h2>
+                    <div id="contact-feedback" class="alert d-none" role="status" aria-live="polite"></div>
                     <form id="contactForm">
                         <div class="form-floating mb-3">
                             <input type="text" name="name" class="form-control" id="nome" placeholder="Seu nome"
@@ -65,13 +66,18 @@
                         </div>
                         <div class="form-floating mb-3">
                             <input type="email" name="email" class="form-control" id="email"
-                                placeholder="seu@exemplo.com" required />
+                                placeholder="seu@exemplo.com" autocomplete="email" inputmode="email" maxlength="120"
+                                required />
                             <label for="email">E-mail</label>
+                            <div class="invalid-feedback">Informe um e-mail valido, por exemplo: nome@dominio.com.</div>
                         </div>
                         <div class="form-floating mb-3">
                             <input type="tel" name="telefone" class="form-control" id="telefone"
-                                placeholder="(XX) XXXX-XXXX" />
+                                placeholder="(XX) XXXX-XXXX" autocomplete="tel-national" inputmode="tel"
+                                pattern="^\(\d{2}\)\s\d{4,5}-\d{4}$" maxlength="16" />
                             <label for="telefone">Telefone</label>
+                            <div class="form-text ps-1">Opcional. Formato: (11) 99999-9999</div>
+                            <div class="invalid-feedback">Informe um telefone valido no formato (11) 99999-9999.</div>
                         </div>
                         <div class="form-floating mb-4">
                             <textarea class="form-control" name="message" placeholder="Digite sua mensagem aqui"
@@ -137,8 +143,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
     <!-- JS Customizado -->
     <script src="../../javascript/script.js"></script>
     <script src="contato.js"></script>

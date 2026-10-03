@@ -1,0 +1,757 @@
+{
+  "metadata": {
+    "database_name": "advocacia_site_simulado",
+    "generated_at": "2026-10-03T13:56:07.367Z",
+    "notes": [
+      "Simulacao inicial em JSON para futura migracao para banco relacional.",
+      "Imagens sao armazenadas como URL/referencia de arquivo do front-end.",
+      "Hash de senha e apenas placeholder; gerar hash real no ambiente de producao."
+    ]
+  },
+  "tables": {
+    "admin_users": [
+      {
+        "id": 1,
+        "full_name": "Administrador Principal",
+        "email": "admin@cardosomuscelli.com.br",
+        "role": "super_admin",
+        "password_hash": "definir_com_bcrypt_em_producao",
+        "oauth_provider": "google",
+        "oauth_subject": null,
+        "is_active": true,
+        "last_login_at": null,
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z"
+      }
+    ],
+    "service_categories": [
+      {
+        "id": 1,
+        "name": "Direito Civil",
+        "slug": "direito-civil",
+        "homepage_route": "direito-civil.html",
+        "short_description": "Contratos, responsabilidade civil, negociacoes e defesa do consumidor.",
+        "is_active": true,
+        "display_order": 1
+      },
+      {
+        "id": 2,
+        "name": "Direito Imobiliario",
+        "slug": "direito-imobiliario",
+        "homepage_route": "direito-imobiliario.html",
+        "short_description": "Compra e venda, locacao e regularizacao de imoveis.",
+        "is_active": true,
+        "display_order": 2
+      },
+      {
+        "id": 3,
+        "name": "Familia e Sucessoes",
+        "slug": "familia-sucessoes",
+        "homepage_route": "familia-sucessoes.html",
+        "short_description": "Divorcio, guarda, inventario e planejamento sucessorio.",
+        "is_active": true,
+        "display_order": 3
+      }
+    ],
+    "photos": [
+      {
+        "id": 1,
+        "entity_type": "service_category",
+        "entity_id": 1,
+        "storage_type": "frontend_asset",
+        "image_url": "img/Civil_2_0D3D47.png",
+        "alt_text": "Direito Civil"
+      },
+      {
+        "id": 2,
+        "entity_type": "service_category",
+        "entity_id": 2,
+        "storage_type": "frontend_asset",
+        "image_url": "img/imobiliario_254761_0D3D47.png",
+        "alt_text": "Direito Imobiliario"
+      },
+      {
+        "id": 3,
+        "entity_type": "service_category",
+        "entity_id": 3,
+        "storage_type": "frontend_asset",
+        "image_url": "img/Assessoria_254761_0D3D47.png",
+        "alt_text": "Familia e Sucessoes"
+      },
+      {
+        "id": 4,
+        "entity_type": "article",
+        "entity_id": 1,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Responsabilidade Civil: Quando há dever de indenizar"
+      },
+      {
+        "id": 5,
+        "entity_type": "article",
+        "entity_id": 2,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Validade de Contratos: Cláusulas essenciais"
+      },
+      {
+        "id": 6,
+        "entity_type": "article",
+        "entity_id": 3,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Inadimplemento Contratual: Direitos e Medidas"
+      },
+      {
+        "id": 7,
+        "entity_type": "article",
+        "entity_id": 4,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1528747045269-390fe33c19d3?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Negociação e Acordo Extrajudicial em Conflitos Civis"
+      },
+      {
+        "id": 8,
+        "entity_type": "article",
+        "entity_id": 5,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Defesa do Consumidor: Práticas Abusivas e Reparação"
+      },
+      {
+        "id": 9,
+        "entity_type": "article",
+        "entity_id": 6,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Danos Morais e Materiais: Diferenças Práticas"
+      },
+      {
+        "id": 10,
+        "entity_type": "article",
+        "entity_id": 7,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Prescrição no Direito Civil: Prazos Importantes"
+      },
+      {
+        "id": 11,
+        "entity_type": "article",
+        "entity_id": 8,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Contrato de Compra e Venda de Imóvel: Cláusulas Essenciais"
+      },
+      {
+        "id": 12,
+        "entity_type": "article",
+        "entity_id": 9,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Regularização de Imóvel: Etapas Jurídicas e Documentos"
+      },
+      {
+        "id": 13,
+        "entity_type": "article",
+        "entity_id": 10,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1581093588401-7a4f2ecb3784?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Locação de Imóvel: Direitos e Deveres no Contrato"
+      },
+      {
+        "id": 14,
+        "entity_type": "article",
+        "entity_id": 11,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Documentação Imobiliária: O que Verificar Antes de Assinar"
+      },
+      {
+        "id": 15,
+        "entity_type": "article",
+        "entity_id": 12,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Direitos do Inquilino: Garantias e Proteção Legal"
+      },
+      {
+        "id": 16,
+        "entity_type": "article",
+        "entity_id": 13,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Investimento Imobiliário com Segurança Jurídica"
+      },
+      {
+        "id": 17,
+        "entity_type": "article",
+        "entity_id": 14,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Due Diligence Imobiliária: Como Reduzir Riscos na Compra"
+      },
+      {
+        "id": 18,
+        "entity_type": "article",
+        "entity_id": 15,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Divórcio Consensual e Litigioso: Principais Diferenças"
+      },
+      {
+        "id": 19,
+        "entity_type": "article",
+        "entity_id": 16,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Guarda Compartilhada: Como Funciona na Prática"
+      },
+      {
+        "id": 20,
+        "entity_type": "article",
+        "entity_id": 17,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Pensão Alimentícia: Fixação, Revisão e Execução"
+      },
+      {
+        "id": 21,
+        "entity_type": "article",
+        "entity_id": 18,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Inventário Judicial e Extrajudicial: Quando Usar"
+      },
+      {
+        "id": 22,
+        "entity_type": "article",
+        "entity_id": 19,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Planejamento Sucessório: Testamento e Doação"
+      },
+      {
+        "id": 23,
+        "entity_type": "article",
+        "entity_id": 20,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "União Estável: Direitos Patrimoniais e Reconhecimento"
+      },
+      {
+        "id": 24,
+        "entity_type": "article",
+        "entity_id": 21,
+        "storage_type": "external_url",
+        "image_url": "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=800&q=80",
+        "alt_text": "Partilha de Bens: Cuidados para Evitar Litígios"
+      }
+    ],
+    "articles": [
+      {
+        "id": 1,
+        "legacy_post_id": 1,
+        "category_id": 1,
+        "title": "Responsabilidade Civil: Quando há dever de indenizar",
+        "slug": "direito-civil-1-responsabilidade-civil-quando-ha-dever-de-indenizar",
+        "description": "Entenda os elementos que configuram responsabilidade civil e como funciona a reparação de danos.",
+        "content_paragraphs": [
+          "A responsabilidade civil surge quando uma conduta causa dano a outra pessoa e existe nexo entre o comportamento e o prejuízo sofrido. Na prática, isso pode ocorrer em relações contratuais, acidentes, falhas na prestação de serviços e diversas outras situações cotidianas.",
+          "Para que haja dever de indenizar, normalmente se avaliam quatro elementos: conduta, dano, nexo causal e culpa, salvo hipóteses específicas de responsabilidade objetiva. Cada caso exige análise técnica dos fatos e das provas para definir a extensão da reparação cabível.",
+          "Os danos podem ser materiais, quando atingem o patrimônio, e morais, quando afetam direitos da personalidade, como honra, imagem e dignidade. A quantificação não é automática e depende de critérios jurídicos, razoabilidade e entendimento dos tribunais.",
+          "A atuação preventiva, com contratos claros e registro adequado de ocorrências, reduz o risco de litígios e fortalece a posição das partes em eventual disputa. Em conflitos já instaurados, a estratégia jurídica deve buscar equilíbrio entre composição eficiente e proteção integral do direito lesado."
+        ],
+        "cover_photo_id": 4,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Responsabilidade Civil: Quando há dever de indenizar",
+        "seo_description": "Entenda os elementos que configuram responsabilidade civil e como funciona a reparação de danos.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 2,
+        "legacy_post_id": 2,
+        "category_id": 1,
+        "title": "Validade de Contratos: Cláusulas essenciais",
+        "slug": "direito-civil-2-validade-de-contratos-clausulas-essenciais",
+        "description": "Conheça os requisitos jurídicos para contratos válidos e os principais pontos de atenção.",
+        "content_paragraphs": [
+          "Um contrato válido deve refletir a vontade das partes, ter objeto lícito e observar os requisitos exigidos para aquele tipo de negócio. A clareza do documento é essencial para que direitos, obrigações e consequências do descumprimento sejam compreendidos desde o início.",
+          "Além da identificação das partes, o contrato deve tratar de preço, prazos, forma de pagamento, responsabilidades e hipóteses de encerramento. Cláusulas genéricas ou contraditórias podem gerar interpretações diferentes e dificultar a execução do acordo.",
+          "Também é importante verificar a capacidade de quem assina e a necessidade de testemunhas, reconhecimento de firma, instrumento público ou registro. A formalidade adequada fortalece a prova do negócio e pode facilitar a cobrança de uma obrigação.",
+          "A revisão jurídica antes da assinatura permite corrigir riscos e adaptar o documento à realidade da operação. Um contrato bem estruturado reduz conflitos e oferece maior previsibilidade para todas as partes."
+        ],
+        "cover_photo_id": 5,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Validade de Contratos: Cláusulas essenciais",
+        "seo_description": "Conheça os requisitos jurídicos para contratos válidos e os principais pontos de atenção.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 3,
+        "legacy_post_id": 3,
+        "category_id": 1,
+        "title": "Inadimplemento Contratual: Direitos e Medidas",
+        "slug": "direito-civil-3-inadimplemento-contratual-direitos-e-medidas",
+        "description": "Veja quais medidas podem ser adotadas em casos de descumprimento contratual.",
+        "content_paragraphs": [
+          "O inadimplemento contratual ocorre quando uma das partes deixa de cumprir uma obrigação no prazo, na forma ou nas condições ajustadas. A primeira providência é verificar o contrato e reunir documentos que comprovem o que foi combinado e o que efetivamente aconteceu.",
+          "Dependendo do caso, a parte prejudicada pode exigir o cumprimento da obrigação, pedir a resolução do contrato ou buscar indenização por perdas e danos. A escolha da medida deve considerar o interesse econômico e a possibilidade de cumprimento tardio.",
+          "Uma notificação extrajudicial pode formalizar a cobrança, estabelecer prazo para solução e demonstrar a tentativa de resolver o problema. Ela deve apresentar os fatos de forma objetiva e indicar as consequências previstas no contrato ou na lei.",
+          "Quando a negociação não resolve o conflito, a documentação reunida orienta a adoção da medida judicial adequada. A atuação rápida é importante porque prazos, provas e condições do negócio podem influenciar diretamente o resultado."
+        ],
+        "cover_photo_id": 6,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Inadimplemento Contratual: Direitos e Medidas",
+        "seo_description": "Veja quais medidas podem ser adotadas em casos de descumprimento contratual.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 4,
+        "legacy_post_id": 4,
+        "category_id": 1,
+        "title": "Negociação e Acordo Extrajudicial em Conflitos Civis",
+        "slug": "direito-civil-4-negociacao-e-acordo-extrajudicial-em-conflitos-civis",
+        "description": "Saiba quando a solução consensual pode reduzir custos e acelerar a resolução do conflito.",
+        "content_paragraphs": [
+          "A negociação extrajudicial permite que as partes construam uma solução sem iniciar imediatamente um processo. O diálogo pode tratar de prazos, valores, formas de pagamento, entrega de documentos e outras condições relevantes para encerrar a controvérsia.",
+          "Para que o acordo seja seguro, é necessário delimitar o conflito, conferir os documentos e avaliar os riscos de cada alternativa. A pressa para encerrar o problema não deve levar à renúncia de direitos sem compreensão das consequências.",
+          "O instrumento deve registrar obrigações objetivas, vencimentos, multas, garantias e efeitos do descumprimento. Dependendo do conteúdo, a assinatura com formalidades adequadas pode fortalecer a exigibilidade do acordo.",
+          "Uma composição bem estruturada reduz custos, preserva relacionamentos e oferece previsibilidade. Mesmo quando existe disposição para conversar, a revisão jurídica é importante para transformar o entendimento em uma solução efetiva."
+        ],
+        "cover_photo_id": 7,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Negociação e Acordo Extrajudicial em Conflitos Civis",
+        "seo_description": "Saiba quando a solução consensual pode reduzir custos e acelerar a resolução do conflito.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 5,
+        "legacy_post_id": 5,
+        "category_id": 1,
+        "title": "Defesa do Consumidor: Práticas Abusivas e Reparação",
+        "slug": "direito-civil-5-defesa-do-consumidor-praticas-abusivas-e-reparacao",
+        "description": "Identifique condutas abusivas e conheça os caminhos para proteger seus direitos.",
+        "content_paragraphs": [
+          "As relações de consumo devem observar transparência, boa-fé e equilíbrio entre fornecedor e consumidor. Informações incompletas, cobranças sem fundamento e restrições desproporcionais podem indicar violação desses deveres.",
+          "Antes de buscar uma solução, é importante guardar contratos, ofertas, comprovantes, protocolos e mensagens. Esses registros ajudam a demonstrar a contratação, o problema apresentado e as tentativas de atendimento realizadas.",
+          "A solução pode começar pelos canais de atendimento do fornecedor ou por plataformas administrativas. Quando a resposta é insuficiente, a análise do caso pode indicar pedido de correção, restituição de valores ou indenização.",
+          "Cada situação deve ser avaliada de acordo com a extensão do prejuízo e com as provas disponíveis. A orientação adequada evita medidas desnecessárias e aumenta a clareza sobre os caminhos para proteger o consumidor."
+        ],
+        "cover_photo_id": 8,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Defesa do Consumidor: Práticas Abusivas e Reparação",
+        "seo_description": "Identifique condutas abusivas e conheça os caminhos para proteger seus direitos.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 6,
+        "legacy_post_id": 6,
+        "category_id": 1,
+        "title": "Danos Morais e Materiais: Diferenças Práticas",
+        "slug": "direito-civil-6-danos-morais-e-materiais-diferencas-praticas",
+        "description": "Aprenda a diferença entre danos morais e materiais e como cada um é tratado no processo.",
+        "content_paragraphs": [
+          "Danos materiais são aqueles que atingem diretamente o patrimônio e podem envolver prejuízo efetivo ou valores que razoavelmente deixaram de ser recebidos. A demonstração do dano normalmente depende de documentos, orçamentos, notas fiscais e outros registros.",
+          "Danos morais estão relacionados à violação de direitos da personalidade, como honra, imagem, privacidade e dignidade. Não se confundem com qualquer aborrecimento, pois exigem situação capaz de causar lesão relevante ao aspecto pessoal da vítima.",
+          "Em um mesmo fato, podem existir danos materiais e morais, mas cada pedido precisa ser fundamentado de acordo com sua natureza. A descrição precisa dos acontecimentos ajuda a delimitar a extensão da responsabilidade.",
+          "A análise jurídica considera as circunstâncias do caso, a prova produzida e os critérios utilizados pelos tribunais. Uma avaliação cuidadosa evita expectativas incompatíveis e direciona a busca por reparação adequada."
+        ],
+        "cover_photo_id": 9,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Danos Morais e Materiais: Diferenças Práticas",
+        "seo_description": "Aprenda a diferença entre danos morais e materiais e como cada um é tratado no processo.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 7,
+        "legacy_post_id": 7,
+        "category_id": 1,
+        "title": "Prescrição no Direito Civil: Prazos Importantes",
+        "slug": "direito-civil-7-prescricao-no-direito-civil-prazos-importantes",
+        "description": "Confira prazos prescricionais relevantes para evitar a perda do direito de ação.",
+        "content_paragraphs": [
+          "A prescrição está relacionada ao prazo para exigir judicialmente uma pretensão. O tempo aplicável varia conforme a natureza do direito, a origem da obrigação e as circunstâncias específicas do caso.",
+          "Para fazer uma contagem segura, é necessário identificar quando a lesão ocorreu ou quando a obrigação se tornou exigível. Documentos, notificações e comunicações podem ajudar a definir o marco inicial.",
+          "Existem situações que podem suspender ou interromper a contagem, mas esses efeitos dependem dos requisitos previstos na legislação. Por isso, não é recomendável presumir que uma negociação informal sempre interrompa o prazo.",
+          "A análise preventiva evita que uma demanda seja apresentada fora do prazo ou que uma oportunidade de acordo seja perdida. Ao identificar um possível conflito, reunir documentos e buscar orientação rapidamente é a conduta mais prudente."
+        ],
+        "cover_photo_id": 10,
+        "source_file": "bancoDados/bd_civil.js",
+        "seo_title": "Prescrição no Direito Civil: Prazos Importantes",
+        "seo_description": "Confira prazos prescricionais relevantes para evitar a perda do direito de ação.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 8,
+        "legacy_post_id": 1,
+        "category_id": 2,
+        "title": "Contrato de Compra e Venda de Imóvel: Cláusulas Essenciais",
+        "slug": "direito-imobiliario-1-contrato-de-compra-e-venda-de-imovel-clausulas-essenciais",
+        "description": "Saiba os principais cuidados na hora de assinar um contrato de compra e venda de imóveis.",
+        "content_paragraphs": [
+          "A compra e venda de imóvel exige atenção desde a fase de negociação, porque qualquer omissão contratual pode gerar disputas futuras entre as partes. Antes de assinar, é importante validar a matrícula atualizada, a situação fiscal do bem e a capacidade jurídica dos contratantes.",
+          "No contrato, cláusulas sobre preço, forma de pagamento, prazo de entrega, multas e condições de rescisão devem ser redigidas com precisão. Termos genéricos costumam abrir margem para interpretações conflitantes e podem dificultar a defesa de direitos em eventual litígio.",
+          "Também é recomendável prever de forma objetiva quem assume custos de cartório, tributos incidentes e eventuais despesas condominiais em aberto. A ausência dessa definição pode gerar cobranças indevidas e atrasar a conclusão do negócio.",
+          "Com uma análise jurídica preventiva, o comprador e o vendedor reduzem riscos, preservam segurança patrimonial e aumentam a previsibilidade da operação. Esse cuidado inicial costuma ser decisivo para evitar prejuízos financeiros e problemas judiciais no futuro."
+        ],
+        "cover_photo_id": 11,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Contrato de Compra e Venda de Imóvel: Cláusulas Essenciais",
+        "seo_description": "Saiba os principais cuidados na hora de assinar um contrato de compra e venda de imóveis.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 9,
+        "legacy_post_id": 2,
+        "category_id": 2,
+        "title": "Regularização de Imóvel: Etapas Jurídicas e Documentos",
+        "slug": "direito-imobiliario-2-regularizacao-de-imovel-etapas-juridicas-e-documentos",
+        "description": "Entenda como funciona o processo de regularização de um imóvel e quais documentos são necessários.",
+        "content_paragraphs": [
+          "A regularização imobiliária é o conjunto de medidas necessárias para adequar a situação documental e registral do imóvel à realidade. O primeiro passo é identificar a origem da irregularidade, que pode estar relacionada à construção, à titularidade, à matrícula ou à ausência de averbações.",
+          "A análise costuma envolver matrícula atualizada, contratos, escrituras, comprovantes fiscais, plantas e documentos emitidos pelo município. Cada caso exige uma conferência própria, pois imóveis com características semelhantes podem depender de procedimentos administrativos diferentes.",
+          "Quando há divergência entre a situação física e os registros oficiais, pode ser necessário solicitar aprovação de projeto, habite-se, retificação de área, usucapião ou outra medida adequada. A escolha do caminho correto evita gastos desnecessários e reduz atrasos no processo.",
+          "Com a documentação organizada e acompanhamento jurídico, o proprietário aumenta a segurança para vender, financiar ou transmitir o imóvel. A regularização também valoriza o patrimônio e previne conflitos com compradores, vizinhos e órgãos públicos."
+        ],
+        "cover_photo_id": 12,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Regularização de Imóvel: Etapas Jurídicas e Documentos",
+        "seo_description": "Entenda como funciona o processo de regularização de um imóvel e quais documentos são necessários.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 10,
+        "legacy_post_id": 3,
+        "category_id": 2,
+        "title": "Locação de Imóvel: Direitos e Deveres no Contrato",
+        "slug": "direito-imobiliario-3-locacao-de-imovel-direitos-e-deveres-no-contrato",
+        "description": "Direitos e deveres de locadores e locatários no contrato de aluguel.",
+        "content_paragraphs": [
+          "A locação de imóvel deve ser formalizada por contrato claro, com definição do prazo, valor do aluguel, índice de reajuste, garantias e responsabilidades de cada parte. Essas informações ajudam a evitar dúvidas durante a vigência e facilitam a solução de eventuais conflitos.",
+          "O locador deve entregar o imóvel em condições adequadas de uso e responder por problemas estruturais anteriores à locação. O locatário, por sua vez, deve pagar pontualmente, conservar o bem e comunicar danos ou reparos necessários assim que forem identificados.",
+          "Também é importante diferenciar despesas ordinárias e extraordinárias de condomínio, além de estabelecer regras para obras, benfeitorias e devolução das chaves. A vistoria inicial e final é uma ferramenta essencial para registrar o estado do imóvel.",
+          "Uma relação locatícia bem documentada protege ambas as partes e reduz o risco de cobranças indevidas. Em caso de inadimplência ou descumprimento contratual, a análise do contrato orienta a medida mais adequada para preservar os direitos envolvidos."
+        ],
+        "cover_photo_id": 13,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Locação de Imóvel: Direitos e Deveres no Contrato",
+        "seo_description": "Direitos e deveres de locadores e locatários no contrato de aluguel.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 11,
+        "legacy_post_id": 4,
+        "category_id": 2,
+        "title": "Documentação Imobiliária: O que Verificar Antes de Assinar",
+        "slug": "direito-imobiliario-4-documentacao-imobiliaria-o-que-verificar-antes-de-assinar",
+        "description": "Documentos necessários para compra, venda e locação de imóveis.",
+        "content_paragraphs": [
+          "A conferência documental antes da assinatura é uma das etapas mais importantes de uma negociação imobiliária. Ela permite identificar restrições, dívidas, ações judiciais e divergências que podem comprometer a segurança do negócio.",
+          "Entre os documentos mais relevantes estão a matrícula atualizada, certidões do imóvel, comprovantes de tributos e informações sobre condomínio. Também é necessário verificar os documentos pessoais e a legitimidade de quem está negociando o bem.",
+          "Em determinadas situações, a análise deve alcançar empresas, inventários, procurações e regimes de bens. Ignorar essas particularidades pode gerar questionamentos sobre a validade da venda ou dificultar o registro da transferência.",
+          "A avaliação preventiva não substitui a decisão das partes, mas oferece elementos para negociar com mais clareza. Com os documentos revisados, eventuais pendências podem ser resolvidas antes da assinatura ou refletidas adequadamente no contrato."
+        ],
+        "cover_photo_id": 14,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Documentação Imobiliária: O que Verificar Antes de Assinar",
+        "seo_description": "Documentos necessários para compra, venda e locação de imóveis.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 12,
+        "legacy_post_id": 5,
+        "category_id": 2,
+        "title": "Direitos do Inquilino: Garantias e Proteção Legal",
+        "slug": "direito-imobiliario-5-direitos-do-inquilino-garantias-e-protecao-legal",
+        "description": "Conheça os principais direitos do inquilino em contratos de aluguel.",
+        "content_paragraphs": [
+          "O inquilino tem direito a receber o imóvel em condições adequadas para a finalidade prevista no contrato. Também deve ter acesso a informações claras sobre aluguel, encargos, garantia e procedimentos para comunicação de reparos.",
+          "A cobrança de valores deve respeitar o contrato e a legislação aplicável. O locador não pode transferir ao inquilino despesas que não sejam de sua responsabilidade nem exigir mais de uma modalidade de garantia na mesma locação.",
+          "Durante a locação, o imóvel deve ser utilizado conforme combinado, mas o inquilino não pode ser privado de sua posse por medidas arbitrárias. Eventuais visitas, obras e inspeções precisam observar aviso prévio e razoabilidade.",
+          "Conhecer esses direitos ajuda o inquilino a registrar problemas, negociar soluções e contestar cobranças indevidas. A guarda de recibos, mensagens e laudos de vistoria também é importante para preservar provas."
+        ],
+        "cover_photo_id": 15,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Direitos do Inquilino: Garantias e Proteção Legal",
+        "seo_description": "Conheça os principais direitos do inquilino em contratos de aluguel.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 13,
+        "legacy_post_id": 6,
+        "category_id": 2,
+        "title": "Investimento Imobiliário com Segurança Jurídica",
+        "slug": "direito-imobiliario-6-investimento-imobiliario-com-seguranca-juridica",
+        "description": "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        "content_paragraphs": [
+          "O investimento imobiliário pode oferecer proteção patrimonial e renda, mas exige análise cuidadosa antes da aplicação dos recursos. A escolha do imóvel deve considerar localização, documentação, liquidez, custos e finalidade do investimento.",
+          "Além do preço, é necessário estimar tributos, despesas cartorárias, condomínio, manutenção e possíveis períodos sem locação. Esses fatores influenciam diretamente o retorno e podem alterar a viabilidade econômica do negócio.",
+          "A análise jurídica deve verificar a titularidade, restrições registrárias, passivos e condições do contrato. Em empreendimentos novos, também merece atenção a situação da incorporadora, as licenças e as regras de entrega.",
+          "Com planejamento e diligência documental, o investidor reduz riscos e toma decisões baseadas em informações concretas. A assessoria preventiva contribui para estruturar a operação e proteger o patrimônio ao longo do tempo."
+        ],
+        "cover_photo_id": 16,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Investimento Imobiliário com Segurança Jurídica",
+        "seo_description": "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 14,
+        "legacy_post_id": 7,
+        "category_id": 2,
+        "title": "Due Diligence Imobiliária: Como Reduzir Riscos na Compra",
+        "slug": "direito-imobiliario-7-due-diligence-imobiliaria-como-reduzir-riscos-na-compra",
+        "description": "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        "content_paragraphs": [
+          "A due diligence imobiliária é uma investigação documental realizada antes da compra para identificar riscos jurídicos, financeiros e registrais. Ela amplia a segurança da negociação e permite que o comprador conheça melhor o ativo que pretende adquirir.",
+          "O trabalho pode incluir análise da matrícula, certidões do imóvel, histórico de propriedade, débitos fiscais, ações judiciais e documentos dos vendedores. Quando o vendedor é uma empresa, também são avaliadas informações societárias e patrimoniais relevantes.",
+          "Os resultados da investigação ajudam a definir garantias, condições suspensivas, retenções de valores e outras cláusulas contratuais. Pendências encontradas podem ser corrigidas antes do fechamento ou consideradas na formação do preço.",
+          "Mais do que uma formalidade, a due diligence é uma ferramenta de gestão de risco. Ela proporciona uma decisão de compra mais consciente e reduz a probabilidade de prejuízos após a transferência do imóvel."
+        ],
+        "cover_photo_id": 17,
+        "source_file": "bancoDados/bd_imobiliario.js",
+        "seo_title": "Due Diligence Imobiliária: Como Reduzir Riscos na Compra",
+        "seo_description": "Dicas para quem quer investir no mercado imobiliário com segurança.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 15,
+        "legacy_post_id": 1,
+        "category_id": 3,
+        "title": "Divórcio Consensual e Litigioso: Principais Diferenças",
+        "slug": "familia-sucessoes-1-divorcio-consensual-e-litigioso-principais-diferencas",
+        "description": "Entenda os caminhos do divórcio, custos envolvidos e como proteger direitos patrimoniais e pessoais.",
+        "content_paragraphs": [
+          "O divórcio consensual ocorre quando ambas as partes concordam com os principais pontos da separação, como partilha de bens, eventual pensão e temas relacionados aos filhos. Essa modalidade tende a ser mais célere, menos desgastante e financeiramente mais previsível.",
+          "Já no divórcio litigioso, existe divergência relevante entre os cônjuges, o que exige intervenção judicial para decisão dos conflitos. Nessas hipóteses, o processo pode se prolongar e demandar produção de provas para definição de guarda, alimentos e divisão patrimonial.",
+          "Independentemente da modalidade, é essencial mapear a situação patrimonial com documentos completos e estabelecer estratégia jurídica coerente com a realidade familiar. A ausência de organização nessa etapa costuma ampliar conflitos e gerar insegurança sobre direitos futuros.",
+          "Com orientação adequada, é possível conduzir a separação com maior proteção jurídica e emocional, priorizando soluções equilibradas e sustentáveis no longo prazo. O foco deve ser preservar direitos, reduzir impactos e construir acordos viáveis sempre que possível."
+        ],
+        "cover_photo_id": 18,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "Divórcio Consensual e Litigioso: Principais Diferenças",
+        "seo_description": "Entenda os caminhos do divórcio, custos envolvidos e como proteger direitos patrimoniais e pessoais.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 16,
+        "legacy_post_id": 2,
+        "category_id": 3,
+        "title": "Guarda Compartilhada: Como Funciona na Prática",
+        "slug": "familia-sucessoes-2-guarda-compartilhada-como-funciona-na-pratica",
+        "description": "Saiba como a guarda compartilhada é definida e quais critérios orientam o melhor interesse da criança.",
+        "content_paragraphs": [
+          "A guarda compartilhada busca garantir a participação conjunta dos pais nas decisões importantes da vida dos filhos. Ela não significa necessariamente divisão matemática do tempo, mas responsabilidade compartilhada e convivência organizada conforme a rotina da criança.",
+          "Na definição do regime, são avaliados o melhor interesse do menor, a disponibilidade dos responsáveis, a distância entre as residências e a capacidade de diálogo. O planejamento deve considerar escola, saúde, férias, atividades e comunicação entre os adultos.",
+          "Mesmo com a guarda compartilhada, pode existir uma residência de referência e um calendário de convivência. O essencial é que o arranjo seja funcional, previsível e respeite as necessidades individuais da criança ou do adolescente.",
+          "A revisão do acordo pode ser necessária quando mudam a rotina, a cidade de residência ou as condições familiares. Uma orientação adequada ajuda a construir regras claras e reduz conflitos na execução do regime."
+        ],
+        "cover_photo_id": 19,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "Guarda Compartilhada: Como Funciona na Prática",
+        "seo_description": "Saiba como a guarda compartilhada é definida e quais critérios orientam o melhor interesse da criança.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 17,
+        "legacy_post_id": 3,
+        "category_id": 3,
+        "title": "Pensão Alimentícia: Fixação, Revisão e Execução",
+        "slug": "familia-sucessoes-3-pensao-alimenticia-fixacao-revisao-e-execucao",
+        "description": "Veja quando é possível revisar valores e quais medidas cabem em caso de inadimplência.",
+        "content_paragraphs": [
+          "A pensão alimentícia deve atender às necessidades de quem recebe sem desconsiderar a capacidade financeira de quem paga. A avaliação considera despesas essenciais, renda, patrimônio, responsabilidades familiares e as particularidades de cada situação.",
+          "O valor pode ser fixado por acordo ou decisão judicial e deve ser atualizado conforme os critérios definidos. Mudanças relevantes nas necessidades ou na capacidade econômica podem justificar um pedido de revisão.",
+          "O atraso no pagamento não deve ser ignorado. Comprovantes, planilhas e registros das parcelas vencidas ajudam a demonstrar o débito e a escolher o procedimento adequado para cobrança.",
+          "A execução da pensão possui mecanismos próprios, mas a medida deve ser adotada com atenção aos valores, períodos e documentos. A orientação jurídica organiza a cobrança e busca preservar o direito alimentar com rapidez."
+        ],
+        "cover_photo_id": 20,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "Pensão Alimentícia: Fixação, Revisão e Execução",
+        "seo_description": "Veja quando é possível revisar valores e quais medidas cabem em caso de inadimplência.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 18,
+        "legacy_post_id": 4,
+        "category_id": 3,
+        "title": "Inventário Judicial e Extrajudicial: Quando Usar",
+        "slug": "familia-sucessoes-4-inventario-judicial-e-extrajudicial-quando-usar",
+        "description": "Compare modalidades de inventário e entenda os requisitos para cada procedimento.",
+        "content_paragraphs": [
+          "O inventário organiza a transferência dos bens, direitos e dívidas deixados por uma pessoa falecida. O procedimento identifica os herdeiros, apura o patrimônio e formaliza a partilha conforme a lei ou as disposições válidas existentes.",
+          "O inventário extrajudicial pode ser uma alternativa mais célere quando todos os envolvidos são capazes, estão de acordo e os requisitos legais são atendidos. Ele é realizado em cartório com acompanhamento de advogado.",
+          "Quando há conflito, herdeiro incapaz ou outra circunstância que impeça a via administrativa, o inventário judicial pode ser necessário. A reunião de certidões, documentos patrimoniais e informações familiares facilita o andamento.",
+          "A escolha da modalidade deve considerar a composição familiar, a existência de testamento, os bens e as dívidas. Um planejamento inicial evita retrabalho e ajuda a preservar o patrimônio durante o processo."
+        ],
+        "cover_photo_id": 21,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "Inventário Judicial e Extrajudicial: Quando Usar",
+        "seo_description": "Compare modalidades de inventário e entenda os requisitos para cada procedimento.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 19,
+        "legacy_post_id": 5,
+        "category_id": 3,
+        "title": "Planejamento Sucessório: Testamento e Doação",
+        "slug": "familia-sucessoes-5-planejamento-sucessorio-testamento-e-doacao",
+        "description": "Conheça alternativas para organizar a sucessão patrimonial e reduzir conflitos familiares.",
+        "content_paragraphs": [
+          "O planejamento sucessório permite organizar a transmissão do patrimônio ainda em vida, respeitando os limites legais e os objetivos da família. A preparação antecipada pode reduzir incertezas e facilitar decisões futuras.",
+          "Testamentos, doações, holdings e outros instrumentos podem ser considerados conforme o perfil patrimonial. Cada alternativa tem requisitos, custos e efeitos próprios, por isso não deve ser escolhida apenas com base em modelos genéricos.",
+          "Também é necessário avaliar regime de bens, herdeiros necessários, tributos, administração dos ativos e proteção de pessoas vulneráveis. A visão completa evita que uma medida aparentemente simples produza conflitos ou seja questionada.",
+          "Um planejamento bem documentado pode preservar a autonomia do titular e tornar a sucessão mais previsível. A revisão periódica é recomendável quando surgem novos bens, mudanças familiares ou alterações relevantes na legislação."
+        ],
+        "cover_photo_id": 22,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "Planejamento Sucessório: Testamento e Doação",
+        "seo_description": "Conheça alternativas para organizar a sucessão patrimonial e reduzir conflitos familiares.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 20,
+        "legacy_post_id": 6,
+        "category_id": 3,
+        "title": "União Estável: Direitos Patrimoniais e Reconhecimento",
+        "slug": "familia-sucessoes-6-uniao-estavel-direitos-patrimoniais-e-reconhecimento",
+        "description": "Entenda efeitos jurídicos da união estável, regime de bens e provas do relacionamento.",
+        "content_paragraphs": [
+          "A união estável é reconhecida pela convivência pública, contínua e duradoura com objetivo de constituição de família. O reconhecimento não depende apenas de uma declaração, mas da análise do conjunto de fatos e provas da relação.",
+          "Na ausência de contrato escrito, o regime patrimonial aplicável pode ser o da comunhão parcial de bens. Isso torna importante identificar quando os bens foram adquiridos e quais recursos foram utilizados na aquisição.",
+          "Contas, documentos de residência, planos, mensagens, fotografias e declarações podem contribuir para demonstrar a existência e o período da união. A prova deve ser organizada conforme a finalidade do reconhecimento.",
+          "A formalização preventiva pode reduzir dúvidas sobre patrimônio, administração de bens e direitos sucessórios. A orientação individualizada ajuda o casal a escolher um instrumento adequado à sua realidade."
+        ],
+        "cover_photo_id": 23,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "União Estável: Direitos Patrimoniais e Reconhecimento",
+        "seo_description": "Entenda efeitos jurídicos da união estável, regime de bens e provas do relacionamento.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      },
+      {
+        "id": 21,
+        "legacy_post_id": 7,
+        "category_id": 3,
+        "title": "Partilha de Bens: Cuidados para Evitar Litígios",
+        "slug": "familia-sucessoes-7-partilha-de-bens-cuidados-para-evitar-litigios",
+        "description": "Veja pontos de atenção na partilha para garantir equilíbrio e segurança jurídica.",
+        "content_paragraphs": [
+          "A partilha de bens exige levantamento completo do patrimônio e definição da origem de cada ativo. Imóveis, veículos, contas, investimentos, empresas e dívidas devem ser identificados para que a divisão reflita a realidade familiar.",
+          "Em divórcios ou dissoluções de união estável, o regime de bens orienta quais patrimônios serão comunicáveis. Documentos de aquisição, contratos e comprovantes financeiros ajudam a esclarecer situações de dúvida.",
+          "Nos inventários, a partilha também deve observar a ordem de vocação hereditária, eventuais testamentos e a existência de herdeiros protegidos pela lei. A avaliação correta dos bens evita desequilíbrios entre os quinhões.",
+          "A construção de um acordo claro pode reduzir custos e preservar relações familiares. Quando não há consenso, a organização documental e a estratégia processual são fundamentais para defender os direitos de cada interessado."
+        ],
+        "cover_photo_id": 24,
+        "source_file": "bancoDados/bd_familiaSucessoes.js",
+        "seo_title": "Partilha de Bens: Cuidados para Evitar Litígios",
+        "seo_description": "Veja pontos de atenção na partilha para garantir equilíbrio e segurança jurídica.",
+        "is_published": true,
+        "is_featured": false,
+        "published_at": "2026-10-03T00:00:00.000Z",
+        "created_at": "2026-10-03T00:00:00.000Z",
+        "updated_at": "2026-10-03T00:00:00.000Z",
+        "estimated_reading_minutes": 1
+      }
+    ]
+  }
+}

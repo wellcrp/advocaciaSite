@@ -1,0 +1,11 @@
+{
+  "name": "advocacia-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix backend run dev",
+    "dev:front": "npm --prefix backend run dev:web",
+    "dev:api": "npm --prefix backend run dev:api",
+    "typecheck": "npm --prefix backend run typecheck"
+  }
+}

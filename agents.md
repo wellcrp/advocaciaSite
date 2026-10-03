@@ -133,11 +133,11 @@ Este documento ajuda qualquer agente (humano ou IA) a entender rapidamente como 
 - O arquivo `.gitignore` ignora `.Claude/`; manter essa regra para evitar ruído no repositório.
 
 ## 8. Como rodar localmente
-Como o projeto é estático, basta servir os arquivos por HTTP local:
+Use Node.js para servir o front-end local:
 
 ```powershell
 cd e:\CodeBox\IA\Advocacia\advocaciaSite
-python -m http.server 5500
+npm run dev:front
 ```
 
 Depois abrir no navegador:
